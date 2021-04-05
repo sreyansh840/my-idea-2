@@ -4,13 +4,13 @@ var welcome,arrow;
 
 
 function preload(){
-  welcomePic=loadImage("welcome.png");
+  welcomePic=loadImage("loading.gif");
 }
 
 
 function setup() {
   createCanvas(displayWidth-20,displayHeight-200);
-  welcome=createSprite(100,100,50,50);
+  welcome=createSprite(650,300,50,50);
 
 }
 
