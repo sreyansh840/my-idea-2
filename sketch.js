@@ -3,11 +3,16 @@ var welcomePic,arrowPic ;
 var welcomeSpr,arrowSpr,storySpr;
 var groupStory,groupStage_1,groupStage_2,groupWelcome;
 var moveSpr;
+var boxSpr,car1,car2,car3,car4,jamesCar;
 
 
 function preload(){
   welcomePic=loadImage("sprites/loading.gif");
   arrowPic=loadImage("sprites/arrow.png");
+  
+  //car1.createSprite=()
+
+
 }
 
 
@@ -25,7 +30,8 @@ function setup() {
   welcomeSpr.addImage(welcomePic);
   arrowSpr.addImage(arrowPic);
   arrowSpr.scale=0.35;
-
+  boxSpr=createSprite(displayHeight-10,displayWidth-100,350,350);
+  
   storySpr=createSprite(20,20,40,40);
 
   arrowSpr.debug=true;
@@ -42,6 +48,8 @@ function setup() {
   groupStory.add(storySpr);
 
   groupStory.add(moveSpr);
+
+  groupStage_1.add(boxSpr);
 
 }
 
@@ -69,7 +77,7 @@ function draw() {
       groupStory.setVisibleEach(true);
       groupStage_1.setVisibleEach(false);
       groupStage_2.setVisibleEach(false);
-      text("____ is a news reporter ",200,50);
+      text("james is a news reporter ",200,50);
 
       if(mousePressedOver(moveSpr)){
         gameState="stage_1";
